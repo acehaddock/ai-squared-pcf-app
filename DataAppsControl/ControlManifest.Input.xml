@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="AISNamespace" constructor="DataAppsControl" version="1.1.0" display-name-key="DataAppsControl" control-type="standard">
+    <property name="stringProperty" display-name-key="stringProperty" of-type="SingleLine.Text" usage="bound" required="true" />
+    <property name="dataAppToken" display-name-key="Data_App_Token" of-type="SingleLine.Text" usage="input" required="true" />
+    <property name="dataAppId" display-name-key="Data_App_Id" of-type="SingleLine.Text" usage="input" required="true" />
+    <resources>
+      <code path="index.ts" order="1" />
+      <css path="css/DataAppsControl.css" order="2" />
+      <resx path="strings/DataAppsControl.1033.resx" version="1.0.0"/>
+    </resources>
+  </control>
+</manifest>
