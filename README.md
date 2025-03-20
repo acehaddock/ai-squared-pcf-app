@@ -13,10 +13,6 @@ description: "This sample describes how to create a pcf app which integrates an 
 
 This sample describes how to create a pcf app which integrates an AI Squared Data App.
 
-## Compatibility
-
-This sample works for model-driven and canvas apps.
-
 ## Steps to get this working
 
 Install `dotnet`  
