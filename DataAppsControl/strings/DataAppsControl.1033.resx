@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="DataAppsControl_Display_Key" xml:space="preserve">
-    <value>DataAppsControl</value>
+    <value>DAControl</value>
     <comment>Display text for DataAppsControl</comment>
   </data>
   <data name="DataAppsControl_Desc_Key" xml:space="preserve">

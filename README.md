@@ -5,15 +5,14 @@ products:
 - power-platform
 - power-apps
 page_type: sample
-description: "This sample describes how to create a pcf app which integrates an AI Squared Data App."
+description: "This pcf app provides a way to reuse multiple AI Squared data apps by using a single solution."
 ---
-# DataApp Power Apps component framework sample
 
 ## Summary
 
-This sample describes how to create a pcf app which integrates an AI Squared Data App.
+This pcf app provides a way to reuse multiple AI Squared data apps by using a single solution.
 
-## Steps to get this working
+## Steps to build the solution
 
 Install `dotnet`  
 Using dotnet install `pac`  

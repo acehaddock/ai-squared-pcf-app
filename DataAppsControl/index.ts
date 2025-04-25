@@ -17,6 +17,9 @@ export class DataAppsControl
   // Flag if script has been loaded
   private _scriptLoadComplete: boolean;
 
+  // Url for AI Squared platform
+  // private _aiSquaredUrl: string | null;
+
   /**
    * Used to initialize the control instance. Controls can kick off remote server calls and other initialization actions here.
    * Data-set values are not initialized here, use updateView.
@@ -44,8 +47,8 @@ export class DataAppsControl
     if (!this._controlViewRendered) {
       this._controlViewRendered = true;
       const id = context.parameters.dataAppId.raw;
-      const token = context.parameters.dataAppToken.raw;
-      id && token && this.renderDataAppIFrame(id, token);
+      const useCaseId = context.parameters.dataAppUseCaseId.raw;
+      id && useCaseId && this.renderDataAppIFrame(id, useCaseId);
     }
   }
 
@@ -80,15 +83,14 @@ export class DataAppsControl
   }
 
   // Method to invoke the DataApp script once its loaded
-  private setLoaded(state: boolean, id: string, token: string): void {
+  private setLoaded(state: boolean, id: string, useCaseId: string): void {
     this._scriptLoadComplete = state;
     // console.log(+id);
     // console.log(token);
     const dataApp = new window.DataApp({
       dataAppId: +id,
-      dataAppToken: token,
+      dataAppUseCaseId: useCaseId,
     });
-    // console.log("Created DataApp");
     dataApp.runDataApp();
   }
 

@@ -8,7 +8,7 @@
   <Import Project="$(PowerAppsTargetsPath)\Microsoft.PowerApps.VisualStudio.Pcf.props" Condition="Exists('$(PowerAppsTargetsPath)\Microsoft.PowerApps.VisualStudio.Pcf.props')"/>
 
   <PropertyGroup>
-    <Name>IFrameControl</Name>
+    <Name>AISPCFApp</Name>
     <ProjectGuid>5947503f-e109-42d3-b320-f2a27c0cd2db</ProjectGuid>
     <OutputPath>$(MSBuildThisFileDirectory)out\controls</OutputPath>
   </PropertyGroup>
@@ -18,6 +18,10 @@
     <!--Remove TargetFramework when this is available in 16.1-->
     <TargetFramework>net462</TargetFramework>
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <SolutionPackageType>Both</SolutionPackageType>
   </PropertyGroup>
 
   <ItemGroup>
