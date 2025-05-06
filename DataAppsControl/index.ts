@@ -48,14 +48,15 @@ export class DataAppsControl
       this._controlViewRendered = true;
       const id = context.parameters.dataAppId.raw;
       const useCaseId = context.parameters.dataAppUseCaseId.raw;
-      id && useCaseId && this.renderDataAppIFrame(id, useCaseId);
+      const url = context.parameters.platformUrl.raw;
+      id && useCaseId && url && this.renderDataAppIFrame(id, useCaseId, url);
     }
   }
 
   /**
    * Render IFrame HTML Element that hosts the DataApp and appends the IFrame to the control container
    */
-  private renderDataAppIFrame(id: string, token: string): void {
+  private renderDataAppIFrame(id: string, useCaseId: string, url: string): void {
 
     // Create the iFrame element
     this._dataAppIFrame = this.createIFrameElement();
@@ -75,9 +76,8 @@ export class DataAppsControl
 
     const daScript = document.createElement("script");
     // This url needs to be replaced with url for the deployed AI Squared instance for VPC deployments
-    daScript.src =
-      "https://api.squared.ai/enterprise/api/v1/data_apps_runner.js";
-    daScript.addEventListener("load", () => this.setLoaded(true, id, token));
+    daScript.src = url;
+    daScript.addEventListener("load", () => this.setLoaded(true, id, useCaseId));
     this._container.appendChild(daScript);
     console.log(daScript);
   }
@@ -85,8 +85,6 @@ export class DataAppsControl
   // Method to invoke the DataApp script once its loaded
   private setLoaded(state: boolean, id: string, useCaseId: string): void {
     this._scriptLoadComplete = state;
-    // console.log(+id);
-    // console.log(token);
     const dataApp = new window.DataApp({
       dataAppId: +id,
       dataAppUseCaseId: useCaseId,

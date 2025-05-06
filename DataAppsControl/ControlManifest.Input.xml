@@ -4,6 +4,7 @@
     <property name="stringProperty" display-name-key="stringProperty" of-type="SingleLine.Text" usage="bound" required="true" />
     <property name="dataAppUseCaseId" display-name-key="Data_App_Usecase_Id" of-type="SingleLine.Text" usage="input" required="true" />
     <property name="dataAppId" display-name-key="Data_App_Id" of-type="SingleLine.Text" usage="input" required="true" />
+    <property name="platformUrl" display-name-key="Platform_URL" of-type="SingleLine.Text" usage="input" required="true" />
     <feature-usage>
       <uses-feature name="WebAPI" required="true" />
   </feature-usage>

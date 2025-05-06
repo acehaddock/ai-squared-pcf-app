@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="DataAppsControl_Display_Key" xml:space="preserve">
-    <value>DAControl</value>
+    <value>DataAppControl</value>
     <comment>Display text for DataAppsControl</comment>
   </data>
   <data name="DataAppsControl_Desc_Key" xml:space="preserve">
@@ -133,12 +133,16 @@
     <value>StringProperty</value>
     <comment>Display text for StringProperty description</comment>
   </data>
-  <data name="Data_Apps_Token" xml:space="preserve">
-    <value>DataAppsToken</value>
-    <comment>Display text for DataApps token</comment>
+  <data name="Data_Apps_Use_Case_Id" xml:space="preserve">
+    <value>DataAppsUseCaseId</value>
+    <comment>Display text for DataApps use case id</comment>
   </data>
   <data name="Data_Apps_ID" xml:space="preserve">
     <value>DataAppsID</value>
     <comment>Display text for DataApps id</comment>
+  </data>
+  <data name="Platform_URL" xml:space="preserve">
+    <value>PlatformUrl</value>
+    <comment>Display text for platform url</comment>
   </data>
 </root>
