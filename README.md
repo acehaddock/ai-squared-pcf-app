@@ -32,7 +32,7 @@ Create a new directory that will contain the solution (the directory can have an
 `cd AISDataAppSolutions`  
 `pac solution init --publisher-name ai2NewPCF --publisher-prefix ai2new`  
 `pac solution add-reference --path ../../`  
-`dotnet build`  
+`dotnet build /p:Configuration=Release`  
   
 After these the zip file will be available within the AISDataAppSolutions/bin/Debug directory  
   
