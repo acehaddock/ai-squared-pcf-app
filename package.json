@@ -25,5 +25,9 @@
     "pcf-scripts": "^1",
     "pcf-start": "^1",
     "typescript": "^4.8.4"
+  },
+  "overrides": {
+    "**/eazy-logger": "4.1.0",
+    "eazy-logger": "4.1.0"
   }
 }
